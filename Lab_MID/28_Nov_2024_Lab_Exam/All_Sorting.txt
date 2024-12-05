@@ -1,0 +1,80 @@
+
+void printArray(int a[],int n)
+{
+    for(int i=0;i<n;i++){cout<<a[i]<<" ";}
+}
+void swaps(int *a, int *b)
+{
+    int temp = *a;
+    *a=*b;
+    *b=temp;
+}
+void bubbleSort(int a[],int n)
+{
+        for(int i=0;i<n-1;i++){
+            int idx=0;
+        for(int j=0;j<n-i-1;j++){
+            if(a[j]>a[j+1]){
+                // int temp = a[j];
+                // a[j]=a[j+1];
+                // a[j+1]=temp;
+                swaps(&a[j],&a[j+1]);
+
+            }
+        }
+    }    
+}
+
+void selectionSort(int a[],int n)
+{
+    for(int i=0;i<n-1;i++)
+    {
+        int smallIdx=i;
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[smallIdx])
+            {
+                smallIdx=j;
+            }
+        }
+        swaps(&a[i],&a[smallIdx]);
+    }
+}
+
+void insertionSort(int a[],int n)
+{
+    for(int i=1;i<n;i++){
+        int curr = a[i];
+        int prev = i-1;
+        
+        while(prev>=0 && a[prev]>curr){
+            a[prev+1]=a[prev];
+            prev--;
+        }
+        
+        a[prev+1]=curr;
+    }
+    
+}
+
+
+
+// Binary Searching
+int st=0, end=n-1,mid;
+    while(st<=end){
+        mid = (st+end)/2;
+        cout<<"MID: "<<mid<<endl;
+        if(find>a[mid]){
+            st=mid+1;
+        } else if (find<a[mid]){
+            end=mid-1;
+            cout<<"End: "<<endl;
+        }else {
+            return mid;
+        }
+    }
+
+
+
+
+
+

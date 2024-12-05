@@ -1,0 +1,1 @@
+Maximum continuous free slots: 3
