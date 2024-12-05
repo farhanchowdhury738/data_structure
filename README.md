@@ -1,1 +1,2 @@
-# data_structure
+# Data Structure --AIUB
+Lab + Theory
